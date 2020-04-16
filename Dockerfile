@@ -9,4 +9,4 @@ RUN pacman -Syu --needed --noconfirm \
       vim \
     && paccache -rfk0
 
-CMD ["R"]
+CMD Rscript -e 'install.packages("remotes")'
