@@ -1,4 +1,4 @@
-FROM: archlinux
+FROM archlinux
 
 RUN useradd docker \
 	&& mkdir /home/docker \
