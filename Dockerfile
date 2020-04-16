@@ -10,5 +10,5 @@ RUN pacman -Syu --needed --noconfirm \
     && paccache -rfk0
 
 RUN mkdir -p /opt/software/setup/R
-ADD r_packages.R /opt/software/setup/R
+ADD https://raw.githubusercontent.com/jeksterslabds/docker/master/r_packages.R /opt/software/setup/R
 RUN Rscript /opt/software/setup/R/r_packages.R
