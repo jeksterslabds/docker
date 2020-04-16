@@ -9,9 +9,4 @@ RUN pacman -Syu --needed --noconfirm \
       vim \
     && paccache -rfk0
 
-RUN useradd docker \
-	&& mkdir /home/docker \
-	&& chown docker:docker /home/docker \
-	&& addgroup docker staff
-
 CMD ["R"]
