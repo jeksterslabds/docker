@@ -9,4 +9,6 @@ RUN pacman -Syu --needed --noconfirm \
       vim \
     && paccache -rfk0
 
-CMD Rscript -e 'install.packages("remotes")'
+RUN mkdir -p /opt/software/setup/R
+ADD r_packages.R /opt/software/setup/R
+RUN Rscript /opt/software/setup/R/r_packages.R
