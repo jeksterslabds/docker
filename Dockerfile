@@ -1,10 +1,5 @@
 FROM archlinux:latest
 
-RUN useradd docker \
-	&& mkdir /home/docker \
-	&& chown docker:docker /home/docker \
-	&& addgroup docker staff
-
 RUN pacman -Syu --needed --noconfirm \
       pacman-contrib \
       base-devel \
@@ -13,5 +8,10 @@ RUN pacman -Syu --needed --noconfirm \
       r \
       vim \
     && paccache -rfk0
+
+RUN useradd docker \
+	&& mkdir /home/docker \
+	&& chown docker:docker /home/docker \
+	&& addgroup docker staff
 
 CMD ["R"]
