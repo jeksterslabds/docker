@@ -11,7 +11,7 @@ RUN pacman -Syu --needed --noconfirm \
       openblas \
       r \
       vim \
-      icu 
+      icu \
     && paccache -rfk0
 ENV EDITOR vim
 # set UTF-8 locale
