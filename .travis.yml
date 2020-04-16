@@ -1,0 +1,7 @@
+os: linux
+dist: xenial
+language: shell
+sudo: required
+services:
+- docker
+script: 'docker build - < Dockerfile'
