@@ -1,4 +1,4 @@
-FROM archlinux
+FROM archlinux:latest
 
 RUN useradd docker \
 	&& mkdir /home/docker \
@@ -6,6 +6,8 @@ RUN useradd docker \
 	&& addgroup docker staff
 
 RUN pacman -Syu --needed --noconfirm \
+  git \
+  base-devel \
   openblas \
   r \
   vim
