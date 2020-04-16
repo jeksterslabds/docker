@@ -6,11 +6,12 @@ RUN pacman -Syu --needed --noconfirm \
       wget \
       curl \
       tk \
-      #texlive-bin \
-      #gcc-fortran\
-      #openblas \
+      texlive-bin \
+      gcc-fortran\
+      openblas \
       r \
       vim \
+      icu 
     && paccache -rfk0
 ENV EDITOR vim
 # set UTF-8 locale
