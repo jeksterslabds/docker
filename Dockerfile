@@ -13,7 +13,8 @@ RUN pacman -Syu --needed --noconfirm \
       vim \
     && paccache -rfk0
 RUN useradd -ms /bin/bash user \
-	&& chown user:user /home/user
+	&& chown user:user /home/user \
+	&& chmod 777 /home/user
 USER user
 WORKDIR /home/user
 RUN wget https://raw.githubusercontent.com/jeksterslabds/docker/master/r_packages.R
