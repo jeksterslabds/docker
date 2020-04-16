@@ -6,7 +6,7 @@ install.packages(
   "remotes",
   repos = repos
 )
-install_github(
+remotes::install_github(
   c(
     "jalvesaq/colorout",
     "jeksterslabRds/jeksterslabRutils"
