@@ -4,6 +4,9 @@ RUN pacman -Syu --needed --noconfirm \
       pacman-contrib \
       base-devel \
       git \
+      tk \
+      texlive-bin \
+      gcc-fortran\
       openblas \
       r \
       vim \
