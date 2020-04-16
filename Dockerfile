@@ -11,7 +11,5 @@ RUN pacman -Syu --needed --noconfirm \
       vim \
     && paccache -rfk0
 RUN useradd -ms /bin/bash user \
-	&& mkdir /home/user \
-	&& chown user:user /home/user \
-	&& addgroup user
+	&& chown user:user /home/user
 RUN https://raw.githubusercontent.com/jeksterslabds/docker/master/r_packages.R
