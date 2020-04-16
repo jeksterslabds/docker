@@ -12,5 +12,8 @@ RUN pacman -Syu --needed --noconfirm \
     && paccache -rfk0
 RUN useradd -ms /bin/bash user \
 	&& chown user:user /home/user
-RUN Rscript https://raw.githubusercontent.com/jeksterslabds/docker/master/r_packages.R
+USER user
+WORKDIR /home/user
+COPY https://raw.githubusercontent.com/jeksterslabds/docker/master/r_packages.R /home/user
+RUN Rscript r_packages.R
 CMD ["R"]
