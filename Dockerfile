@@ -10,8 +10,8 @@ RUN pacman -Syu --needed --noconfirm \
       r \
       vim \
     && paccache -rfk0
-RUN useradd -ms /bin/bash docker \
-	&& mkdir /home/docker \
-	&& chown docker:docker /home/docker \
-	&& addgroup docker
+RUN useradd -ms /bin/bash user \
+	&& mkdir /home/user \
+	&& chown user:user /home/user \
+	&& addgroup user
 RUN https://raw.githubusercontent.com/jeksterslabds/docker/master/r_packages.R
