@@ -10,6 +10,8 @@ RUN pacman -Syu --needed --noconfirm \
       r \
       vim \
     && paccache -rfk0
-RUN useradd -ms /bin/bash user
-USER user
-WORKDIR /home/user
+RUN useradd -ms /bin/bash useR
+USER useR
+WORKDIR /home/useR
+ADD https://raw.githubusercontent.com/jeksterslabds/docker/master/r_packages.R /home/useR
+RUN Rscript r_packages.R
