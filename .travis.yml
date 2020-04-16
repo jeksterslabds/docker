@@ -4,4 +4,5 @@ language: shell
 sudo: required
 services:
 - docker
-script: 'docker build - < Dockerfile'
+before_install:
+- 'docker build -t Dockerfile'
