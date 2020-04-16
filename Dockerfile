@@ -6,15 +6,17 @@ RUN useradd docker \
 	&& addgroup docker staff
 
 RUN pacman -Syu --needed --noconfirm \
-  git \
-  base-devel \
-  openblas \
-  r \
-  vim
+      pacman-contrib \
+      base-devel \
+      git \
+      openblas \
+      r \
+      vim \
+    && paccache -rfk0
 
 RUN useradd docker \
-	&& mkdir /home/docker \
-	&& chown docker:docker /home/docker \
-	&& addgroup docker staff
+      && mkdir /home/docker \
+      && chown docker:docker /home/docker \
+      && addgroup docker staff
 
 CMD ["R"]
