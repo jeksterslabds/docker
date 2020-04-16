@@ -1,4 +1,4 @@
-FROM archlinux/base:20200407
+FROM archlinux/base:latest
 RUN pacman -Syu --needed --noconfirm \
       pacman-contrib \
       base-devel \
