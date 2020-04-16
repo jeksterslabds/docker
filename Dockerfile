@@ -1,4 +1,4 @@
-FROM archlinux:latest
+FROM archlinux/base
 
 RUN pacman -Syu --needed --noconfirm \
       pacman-contrib \
